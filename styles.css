@@ -1,0 +1,149 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #fff0f5;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    background-color: #f8bbd0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+section {
+    flex: 1 1 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+h2 {
+    margin-top: 0;
+    color: #ad1457;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 12px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+input.qty-input {
+    width: 50px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    padding: 6px 12px;
+    background-color: #ec407a;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+button:hover {
+    background-color: #d81b60;
+}
+
+.remove-btn {
+    background-color: #ff7043;
+}
+
+.remove-btn:hover {
+    background-color: #e64a19;
+}
+
+footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+img.flower-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+.color-option-label {
+    position: relative;
+    display: inline-block;
+    margin: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #fff;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: inline-block;
+}
+
+.color-name {
+    margin-left: 8px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.color-checkbox {
+    margin-right: 8px; 
+    vertical-align: middle;
+    width: 16px; 
+    height: 16px;
+}
+
+
+.color-option:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+.color-checkbox {
+    display: none; /* Hide the checkbox itself */
+}
+
+
+.color-option {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.color-option:hover {
+    opacity: 0.7;
+}
+
+h3 {
+    color: #c2185b;
+}
