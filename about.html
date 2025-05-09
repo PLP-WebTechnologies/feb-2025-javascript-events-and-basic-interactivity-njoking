@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - Bloom & Basket</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .about-page {
+      padding: 2rem;
+    }
+
+    .hero {
+      background: url('images/hero-flowers.jpg') center/cover no-repeat;
+      color: white;
+      text-align: center;
+      padding: 5rem 2rem;
+      border-radius: 8px;
+    }
+
+    .about-section {
+      margin: 2rem 0;
+    }
+
+    .about-highlights {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .about-highlights li {
+      padding: 0.5rem 0;
+    }
+
+    .team-section {
+      margin-top: 3rem;
+      text-align: center;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .team-member {
+      background-color: #fdf9f9;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+
+    .team-member img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .team-member h4 {
+      margin: 0.5rem 0 0.2rem;
+    }
+
+    .photo-gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+    }
+
+    .photo-gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .about-cta {
+      margin: 3rem 0;
+      background-color: #f0f8ff;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366;
+      color: white;
+      padding: 10px 15px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding: 2rem;
+      background-color: #333;
+      color: white;
+      text-align: center;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      padding: 0;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Bloom & Basket</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="about-page">
+    <section class="hero">
+      <h1>About Bloom & Basket</h1>
+      <p>Where Every Bloom Tells a Story</p>
+    </section>
+
+    <section class="about-section">
+      <h2>Our Story</h2>
+      <p>
+        Bloom & Basket was born from a dream to turn every moment into something memorable. Our floral studio began in a humble home garden, blooming into a full-service shop known for elegant arrangements, personalized service, and a love for life’s precious events.
+      </p>
+    </section>
+
+    <section class="photo-gallery">
+      <img src="images/shop.jpg" alt="Our shop front">
+      <img src="images/members.jpg" alt="Team in workshop">
+      <img src="images/warrangement.jpg" alt="Wedding arrangement">
+      <img src="images/event.jpg" alt="Event setup">
+      <img src="images/bouquet.jpg" alt="Bouquet closeup">
+      <img src="images/basket.jpg" alt="Flower basket">
+    </section>
+
+    <section class="about-section">
+      <h2>Our Mission</h2>
+      <p>
+        To inspire joy, comfort, and celebration through exceptional floral artistry and heartfelt customer care. Every petal, bouquet, and delivery is a promise of love and attention to detail.
+      </p>
+    </section>
+
+    <section class="about-section">
+      <h2>Why Choose Us?</h2>
+      <ul class="about-highlights">
+        <li><strong>Artistic Excellence:</strong> Each bloom is thoughtfully placed, creating designs that speak volumes.</li>
+        <li><strong>Fresh, Ethical Sourcing:</strong> We partner with local and global farms for the freshest, most sustainable flowers.</li>
+        <li><strong>Real Relationships:</strong> From personal messages to wedding dreams, we listen and deliver with care.</li>
+        <li><strong>Timely Delivery:</strong> Our delivery team ensures flowers arrive fresh and on time—every time.</li>
+      </ul>
+    </section>
+
+    <section class="team-section">
+      <h2>Meet Our Founder & Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="images/rose.jpg" alt="Founder">
+          <h4>Grace Nyambura</h4>
+          <p>Founder & Lead Designer</p>
+        </div>
+        <div class="team-member">
+          <img src="images/daisy.jpg" alt="Florist">
+          <h4>James Otieno</h4>
+          <p>Senior Florist</p>
+        </div>
+        <div class="team-member">
+          <img src="images/delivery.jpg" alt="Customer Support">
+          <h4>Mary Wanjiku</h4>
+          <p>Customer Experience Lead</p>
+        </div>
+        <div class="team-member">
+          <img src="images/tulip.jpg" alt="Logistics">
+          <h4>Daniel Mwangi</h4>
+          <p>Logistics & Delivery Manager</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-cta">
+      <h3>Let’s Bloom Together</h3>
+      <p>Visit our <a href="shop.html">shop</a>, explore our <a href="services.html">services</a>, or <a href="contact.html">connect with us</a> today. Let us turn your moments into timeless memories with the beauty of flowers.</p>
+    </section>
+  </main>
+
+  <footer>
+    <ul class="footer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <p>&copy; 2025 Bloom & Basket. All rights reserved.</p>
+  </footer>
+
+  <a href="https://wa.me/yourphonenumber" class="whatsapp-float" target="_blank">
+    Chat with us
+    <img src="images/whatsapp-icon.png" alt="WhatsApp" width="20" height="20">
+  </a>
+
+</body>
+</html>

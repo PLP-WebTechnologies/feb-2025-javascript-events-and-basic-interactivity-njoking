@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shop | Bloom & Basket</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Bloom & Basket</h1>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Our Flower Collection</h2>
+    <div class="gallery-grid" id="flower-list">
+      <!-- JavaScript will populate the flowers -->
+    </div>
+
+    <section class="cart-section">
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+      <div class="cart-summary">
+        <p><strong>Total: </strong>Ksh <span id="total">0</span></p>
+        <a href="checkout.html" class="checkout-btn">Proceed to Checkout</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bloom & Basket | All rights reserved</p>
+  </footer>
+
+  <script>
+    const flowerData = [
+      { name: "Rose", description: "A classic flower symbolizing love.", image: "images/rose.jpg", price: 500 },
+      { name: "Daisy", description: "A cheerful flower representing purity.", image: "images/daisy.jpg", price: 350 },
+      { name: "Tulip", description: "A vibrant flower that blooms in spring.", image: "images/tulip.jpg", price: 600 },
+      { name: "Sunflower", description: "A bright, sunny flower that faces the sun.", image: "images/sunflower.jpg", price: 400 },
+      { name: "Lily", description: "A fragrant flower symbolizing purity.", image: "images/lily.jpg", price: 550 },
+      { name: "Cherry Blossom", description: "A delicate flower representing beauty.", image: "images/cherryblossom.jpg", price: 750 },
+      { name: "Hibiscus", description: "A tropical flower symbolizing beauty.", image: "images/hibiscus.jpg", price: 650 },
+      { name: "Marigold", description: "A vibrant flower of passion.", image: "images/marigold.jpg", price: 300 },
+      { name: "Peony", description: "A romantic flower symbolizing prosperity.", image: "images/peony.jpg", price: 700 },
+      { name: "Lavender", description: "A calming flower known for fragrance.", image: "images/lavender.jpg", price: 450 },
+      { name: "Orchid", description: "A luxurious flower symbolizing beauty.", image: "images/orchid.jpg", price: 900 },
+      { name: "Carnation", description: "A delicate flower for love.", image: "images/carnation.jpg", price: 400 },
+      { name: "Bluebell", description: "A charming flower symbolizing gratitude.", image: "images/bluebell.jpg", price: 350 },
+      { name: "Gardenia", description: "A fragrant flower symbolizing sweetness.", image: "images/gardenia.jpg", price: 500 },
+      { name: "Jasmine", description: "A fragrant flower symbolizing grace.", image: "images/jasmine.jpg", price: 600 },
+      { name: "Magnolia", description: "A large, fragrant flower of nobility.", image: "images/magnolia.jpg", price: 650 },
+      { name: "Begonia", description: "A colorful flower of compassion.", image: "images/begonia.jpg", price: 550 },
+      { name: "Camellia", description: "A graceful flower of passion.", image: "images/camellia.jpg", price: 600 },
+      { name: "Pansy", description: "A flower representing remembrance.", image: "images/pansy.jpg", price: 350 },
+      { name: "Zinnia", description: "A hardy flower of friendship.", image: "images/zinia.jpg", price: 400 }
+    ];
+
+    const flowerList = document.getElementById('flower-list');
+    const cartItems = document.getElementById('cart-items');
+    const totalEl = document.getElementById('total');
+    let cart = [];
+
+    function updateCart() {
+      cartItems.innerHTML = '';
+      let total = 0;
+      cart.forEach(item => {
+        total += item.price;
+        const div = document.createElement('div');
+        div.className = 'cart-item';
+        div.innerHTML = `
+          <p>${item.name} - Ksh ${item.price} (x${item.quantity})</p>
+          <button onclick="removeFromCart('${item.name}')">Remove</button>
+        `;
+        cartItems.appendChild(div);
+      });
+      totalEl.textContent = total;
+    }
+
+    function addToCart(name, color, quantity) {
+      const flower = flowerData.find(f => f.name === name);
+      if (flower) {
+        const item = { ...flower, color, quantity };
+        cart.push(item);
+        updateCart();
+      }
+    }
+
+    function removeFromCart(name) {
+      cart = cart.filter(item => item.name !== name);
+      updateCart();
+    }
+
+    flowerData.forEach(flower => {
+      const card = document.createElement('div');
+      card.className = 'flower-card';
+      card.innerHTML = `
+        <img src="${flower.image}" alt="${flower.name}">
+        <h3>${flower.name}</h3>
+        <p>${flower.description}</p>
+        <p class="price">Ksh ${flower.price}</p>
+
+        <label for="color-${flower.name}">Choose color:</label>
+        <select id="color-${flower.name}">
+          <option value="Red">Red</option>
+          <option value="Yellow">Yellow</option>
+          <option value="Pink">Pink</option>
+          <option value="White">White</option>
+        </select>
+
+        <label for="quantity-${flower.name}">Quantity:</label>
+        <input type="number" id="quantity-${flower.name}" min="1" value="1">
+
+        <button onclick="addToCart('${flower.name}', document.getElementById('color-${flower.name}').value, document.getElementById('quantity-${flower.name}').value)">Add to Cart</button>
+      `;
+      flowerList.appendChild(card);
+    });
+  </script>
+</body>
+</html>
